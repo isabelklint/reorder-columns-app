@@ -141,10 +141,11 @@ class App extends React.Component {
               >
                 {this.state.columnOrder.map((columnId, index) => {
                   const column = this.state.columns[columnId]
-                  const tasks = column.taskIds.map(
+                   /* eslint-disable no-unused-vars */
+                   const tasks = column.taskIds.map(
                     taskId => this.state.tasks[taskId]
                   );
-
+                  /* eslint-enable no-unused-vars */
                   return (
                     <InnerList 
                       key={column.id} 
